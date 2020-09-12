@@ -1,11 +1,18 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
 
 import { Card } from '../components';
 import theme from '../theme';
 
 class Stores extends Component {
+
+	_renderBusiness({ item }) {
+		return (
+			<Card data={item} />
+		)
+	}
+
 	render() {
 		return (
 			<View style={styles.container}>
@@ -24,7 +31,12 @@ class Stores extends Component {
 				</View>
 				{/* container for business listing */}
 				<View style={styles.listingContainer}>
-					<Card />
+					<FlatList
+						data={this.props.businesses}
+						renderItem={this._renderBusiness}
+	   					keyExtractor={item => item.id}
+						contentInsetAdjustmentBehavior="automatic"
+					/>
 				</View>
 			</View>
 		);
@@ -83,13 +95,16 @@ const styles = StyleSheet.create({
 		fontWeight: 'normal'
 	},
 	listingContainer: {
-		marginTop: 50
+		flex: 1,
+		marginTop: 30
 	}
 
 });
 
-const mapStateToProps = (state, ownProps) => {
-	return {};
+const mapStateToProps = ({ stores }, ownProps) => {
+	return {
+		businesses: stores.businesses
+	};
 };
 
 export default connect(mapStateToProps, {})(Stores);

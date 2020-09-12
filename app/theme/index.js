@@ -11,5 +11,8 @@ export default {
     images: {
         banner: require('./images/banner.jpg'),
         yelpLogo: require('./images/yelp-logo.png'),
+        starEmpty: require('./images/star-empty.png'),
+        starHalf: require('./images/star-half.png'),
+        starFull: require('./images/star-full.png'),
     },
 };
