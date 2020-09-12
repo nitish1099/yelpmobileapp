@@ -13,15 +13,17 @@ import rootReducer from './app/reducers';
 
 const Stack = createStackNavigator();
 
-//creating store from the reducers
+// creating store from the reducers
 const store = createStore(rootReducer, {}, applyMiddleware(ReduxThunk));
 
 export default function App() {
 	return (
-        // providing store to the navigator
+		// providing store to the navigator
 		<Provider store={store}>
 			<NavigationContainer>
-				<Stack.Navigator>
+				<Stack.Navigator screenOptions={{
+                    headerShown: false
+                }}>
 					<Stack.Screen
 						name="Stores"
 						component={StoresScreen}
