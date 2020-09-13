@@ -80,4 +80,4 @@ npx react-native run-ios
 ![Screenshot](./screenshot.png)
 
 ## Demo
-[Demo]x(https://www.loom.com/share/a44dc70b584b47d1a30ab31010a9b6d7)
+[Demo](https://www.loom.com/share/a44dc70b584b47d1a30ab31010a9b6d7)
