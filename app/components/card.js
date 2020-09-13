@@ -17,9 +17,8 @@ const Card = ({ data }) => {
                     return <Image source={theme.images.starEmpty} style={styles.star}/>;
                 }
             })
-        )
-
-    }
+        );
+    };
 
     return (
         <View style={styles.container}>
@@ -51,8 +50,8 @@ const Card = ({ data }) => {
                 </View>
             </View>
         </View>
-    )
-}
+    );
+};
 
 export { Card };
 
@@ -77,17 +76,17 @@ const styles = StyleSheet.create({
     imageContainer: {
         width: 150,
         height: 150,
-        backgroundColor: theme.colors.mediumGray
+        backgroundColor: theme.colors.mediumGray,
     },
     image: {
         flex: 1,
-        resizeMode: 'cover'
+        resizeMode: 'cover',
     },
     info: {
         padding: 5,
         paddingLeft: 10,
         paddingRight: 10,
-        flex: 1
+        flex: 1,
     },
     name: {
         fontSize: 16,
@@ -101,12 +100,12 @@ const styles = StyleSheet.create({
     starsContainer: {
         flexDirection: 'row',
         marginTop: 1,
-        marginRight: 5
+        marginRight: 5,
     },
     star: {
         height: 14,
         width: 14,
-        resizeMode: 'contain'
+        resizeMode: 'contain',
     },
     rating: {
         fontSize: 14,
@@ -123,12 +122,12 @@ const styles = StyleSheet.create({
     reviewInfo: {
         marginTop: 12.5,
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     reviewUser: {
         fontSize: 14,
         fontWeight: 'bold',
-        color: theme.colors.lightGray
+        color: theme.colors.lightGray,
     },
     reviewRated: {
         fontWeight: 'normal',
@@ -150,6 +149,5 @@ const styles = StyleSheet.create({
         marginTop: 5,
         color: theme.colors.lightGray,
         fontSize: 12,
-    }
-
+    },
 });
