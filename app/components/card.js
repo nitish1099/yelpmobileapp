@@ -58,6 +58,7 @@ export { Card };
 const styles = StyleSheet.create({
 	container: {
         width: '95%',
+        height: 150,
         flexDirection: 'row',
         alignSelf: 'center',
         backgroundColor: theme.colors.white,
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     reviewInfo: {
-        marginTop: 12.5,
+        marginTop: 5,
         alignItems: 'center',
         flexDirection: 'row',
     },
